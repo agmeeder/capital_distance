@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	model = "llama3:8b"
+	model = "gemma2:latest"
 )
 
 func main() {
@@ -61,14 +61,14 @@ func main() {
 			Role:    "system",
 			Content: fmt.Sprintf("You are a helpful AI assistant. The user will enter two country names and the assistant will return the country, the capital per country and the decimal latitude and decimal longitude of the capital of both countries, Output in JSON using the schema defined here: %v", string(resultSchemaJson)),
 		},
-		{
-			Role:    "user",
-			Content: "Netherlands,Germany",
-		},
-		{
-			Role:    "assistant",
-			Content: "[{\"country\":\"Netherlands\", \"city\":\"Amsterdam\", \"lat\": 52.370216, \"lon\": 4.8951667 },{\"country\":\"Belgium\", \"city\":\"Brussels\", \"lat\": 50.8503395, \"lon\": 4.3516263 }]",
-		},
+		// {
+		// 	Role:    "user",
+		// 	Content: "Netherlands,Germany",
+		// },
+		// {
+		// 	Role:    "assistant",
+		// 	Content: "[{\"country\":\"Netherlands\", \"city\":\"Amsterdam\", \"lat\": 52.370216, \"lon\": 4.8951667 },{\"country\":\"Belgium\", \"city\":\"Brussels\", \"lat\": 50.8503395, \"lon\": 4.3516263 }]",
+		// },
 		{
 			Role:    "user",
 			Content: fmt.Sprintf("%v, %v", country1, country2),

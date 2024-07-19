@@ -1,6 +1,9 @@
 package main
 
 type (
+	Degrees float64
+	Radians float64
+
 	SchemaType struct {
 		Type        string `json:"type"`
 		Description string `json:"description"`
@@ -20,8 +23,8 @@ type (
 	City struct {
 		Country string  `json:"country"`
 		City    string  `json:"city"`
-		Lat     float64 `json:"lat"`
-		Lon     float64 `json:"lon"`
+		Lat     Degrees `json:"lat"`
+		Lon     Degrees `json:"lon"`
 	}
 
 	Cities struct {

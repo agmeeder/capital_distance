@@ -1,4 +1,4 @@
-module capital_distance
+module github.com/agmeeder/capital_distance
 
 go 1.22.5
 
